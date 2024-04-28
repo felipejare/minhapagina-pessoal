@@ -7,9 +7,9 @@
             Jaré</a>  
 
             <RouterLink class="apertadores" to="/">/home</RouterLink>
-            <RouterLink class="apertadores" to="/about">/about</RouterLink>
+            <RouterLink class="apertadores" to="/about">/experiencia</RouterLink>
             <a class="apertadores" href="">/projetos</a>
-            <a class="apertadores" href="">/me like</a>
+            <RouterLink class="apertadores" to="/melike" >/me like</RouterLink>
             <a class="apertadores" href="">/contato</a>
 
 
