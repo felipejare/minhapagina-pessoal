@@ -29,6 +29,7 @@ nav{
   margin-left: 30px;
   background-color: rgb(0, 0, 0, 0.83) ;
   width: 100%;
+  font-family: 'Source Code Pro', monospace;  
 }
 
 .apertadores{
@@ -36,6 +37,10 @@ nav{
   margin: auto;
   color: white;
 
+}
+
+.apertadores:hover {
+  color: rgb(170, 255, 0);
 }
 
 </style>

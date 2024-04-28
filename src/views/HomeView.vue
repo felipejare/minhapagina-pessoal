@@ -22,7 +22,7 @@
 
 <style scoped>
 .background-image {
-  background-image: url('../images/bloco-estrutural-1.jpg');
+  background-image: url('../images/codew.jpg');
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -41,6 +41,16 @@
 /* Remova a classe .bloco, pois não é mais necessária */
 
 .effectfrase {
-  /* Adicione estilos adicionais conforme necessário */
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title{
+
+  color: white;
+  font-size: 180%;
+  position: relative;
+  font-family: 'Roboto', 'Montserrat', 'Quicksand', 'OpenSans', sans-serif;
+
 }
 </style>
