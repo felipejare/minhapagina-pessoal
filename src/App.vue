@@ -1,44 +1,23 @@
 <script setup lang="ts">
-
+import NavBar from '../src/components/NavBar.vue'
 </script>
 
 <template>
-  <header>
-    
+  <div class="bloco">
+    <NavBar />
 
-
-      <nav>
-        <div class="apertadores">
-          
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <a href="">projetos</a>
-        <a href="">me like</a>
-        <a href="">contato</a>
-
-
-        </div> 
-      </nav>
-  </header>
-
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
 
-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30px;
+.bloco {
+  background-image: url('sua-imagem-de-fundo.jpg'); /* Substitua pelo caminho correto da sua imagem */
+  background-repeat: no-repeat;
+  background-size: cover; /* A imagem preencherá todo o elemento */
+  background-position: center center; /* Centraliza a imagem */
+  height: 100vh; /* Define a altura para ocupar toda a tela */
+  /* Outros estilos conforme necessário */
 }
-
-.apertadores{
-
-  padding: 10px;
-
-}
-
-
 </style>
