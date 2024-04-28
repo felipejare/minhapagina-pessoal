@@ -43,6 +43,8 @@
 .effectfrase {
   color: white;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 50px;
 }
 
 .title{
