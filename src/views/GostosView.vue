@@ -5,13 +5,17 @@ import CardLarge from '../components/CardLarge.vue'
 import DropDown from '../components/DropDown.vue'
 </script>
 <template>
-  <div class="container">
-    <DropDown />
-    <div class="cards-row">
-      <CardMedium />
-      <CardSmall />
+  <div class="body">
+    <div class="container">
+     
+      <div class="cards-row">
+        <CardMedium />
+        <CardSmall />
+      </div>
+      <CardLarge />
+      <DropDown />
     </div>
-    <CardLarge />
+  
   </div>
 </template>
 <style scoped>
@@ -27,4 +31,7 @@ import DropDown from '../components/DropDown.vue'
   justify-content: center;
 }
 
+.body{
+  background-color: black;
+}
 </style>

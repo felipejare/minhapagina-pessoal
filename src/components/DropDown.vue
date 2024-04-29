@@ -1,59 +1,58 @@
-<script></script>
-
 <template>
-  <nav class="menu">
-    <ul>
-      <li class="dropdown">
-        <a href="#">Produtos</a>
-        <div class="dropdown-content">
-          <a href="#">Produto 1</a>
-          <a href="#">Produto 2</a>
-          <a href="#">Produto 3</a>
-        </div>
-      </li>
+  <div class="dropdown">
+    <button @click="toggleDropdown" class="button">
+      Abrir Menu
+    </button>
+    <ul v-if="isOpen" class="menu">
+      <li>Opção 1</li>
+      <li>Opção 2</li>
+      <li>Opção 3</li>
     </ul>
-  </nav>
+  </div>
 </template>
 
-<style scoped>
+<script lang="ts">
+export default {
+  data() {
+    return {
+      isOpen: false
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.isOpen = !this.isOpen;
+    }
+  }
+};
+</script>
 
-.menu ul {
+<style scoped>
+.button {
+  background: linear-gradient(to bottom, #8a2be2, #4b0082);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 75px;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.menu {
+  display: none;
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 65px;
+  width: 500px;
+  background-color: #8a2be2;
 }
 
-.menu ul li {
-  float: left;
-  position: relative;
-}
-
-.menu ul li a {
+.dropdown:hover .menu {
   display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-/* Estilo para o submenu dropdown */
-.dropdown-content {
-  display: none;
-  background-color: #f9f9f9;
-  min-width: 120px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-/* Mostrar o submenu quando o item de menu é hover */
-.menu ul li:hover .dropdown-content {
-  display: block;
-}
-
-
 </style>
