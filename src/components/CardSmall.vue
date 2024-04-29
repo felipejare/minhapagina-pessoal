@@ -1,21 +1,22 @@
+<script></script>
+
 <template>
-    <div class="container">
-      <div class="block"></div>
-    </div>
-  </template>
-  
-  <style scoped>
-  .container {
-    background-color: rgb(255, 255, 255);
-    width: 300px;
-    height: 400px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .block {
+  <div class="container">
+    <div class="block"></div>
+  </div>
+</template>
+
+<style scoped>
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.block {
     background-color: rgb(8, 0, 44);
     box-shadow: 80px purple;
     width: 98%;
@@ -34,4 +35,4 @@
     border-image-slice: 1;
     transition: border-image 0.3s ease;
   }
-  </style>
+</style>
