@@ -24,9 +24,9 @@ export default {
   data() {
     return {
       slides: [
-        'https://via.placeholder.com/300x200?text=Slide%201',
-        'https://via.placeholder.com/300x200?text=Slide%202',
-        'https://via.placeholder.com/300x200?text=Slide%203'
+        '../src/images/gojo.jpg',
+        '../src/images/luffy.png',
+        '../src/images/jojos.png'
       ],
       currentSlide: 0,
       isOpen: false
@@ -96,8 +96,9 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 250px;
-  width: 800px;
+  height: 450px;
+  width: 900px;
+  padding-right: 300px;
 }
 
 .carousel {
@@ -107,7 +108,10 @@ export default {
 }
 
 .slide img {
-  width: 200px;
+  width: 700px;
   height: auto;
+  border: 3px solid; /* Define a cor da borda no hover */
+    border-image: linear-gradient(to right, rgb(96, 0, 151), rgb(115, 255, 0));
+    border-image-slice: 1;
 }
 </style>
