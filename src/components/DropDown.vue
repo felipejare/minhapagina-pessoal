@@ -9,10 +9,11 @@
         <div class="carousel">
           <button @click="prevSlide">ANTERIOR</button>
           <div class="slide">
-            <h1>{{ slideDescriptions[currentSlide] }}</h1>
+            <h1>{{ slideName[currentSlide] }}</h1>
             <img :src="slides[currentSlide]" alt="Slide">
           </div>
           <button @click="nextSlide">PROXIMO</button>
+          <p>{{ slideDescription[currentSlide] }}</p>
         </div>
       </li>
     </ul>
@@ -29,10 +30,16 @@ export default {
         '../src/images/luffy.png',
         '../src/images/jojos.png'
       ],
-      slideDescriptions: [
+      slideName: [
         'Satoru Gojo - O Feiticeiro mais forte',
         'Monkey D. Luffy - O Capitão dos Piratas do Chapéu de Palha',
         'Jojos\' Bizarre Adventure - Steel Ball Run'
+      ],
+      slideDescription: [
+        'Satoru gojo é o mais lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
+        'MACACO DE LUVA É O MAIS BIADO lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
+        'jojos aventuras bizarras é um anime sobre porradaria e sexo'
+
       ],
       currentSlide: 0,
       isOpen: false
