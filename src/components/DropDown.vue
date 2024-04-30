@@ -9,6 +9,7 @@
         <div class="carousel">
           <button @click="prevSlide">ANTERIOR</button>
           <div class="slide">
+            <h1>{{ slideDescriptions[currentSlide] }}</h1>
             <img :src="slides[currentSlide]" alt="Slide">
           </div>
           <button @click="nextSlide">PROXIMO</button>
@@ -27,6 +28,11 @@ export default {
         '../src/images/gojo.jpg',
         '../src/images/luffy.png',
         '../src/images/jojos.png'
+      ],
+      slideDescriptions: [
+        'Satoru Gojo - O Feiticeiro mais forte',
+        'Monkey D. Luffy - O Capitão dos Piratas do Chapéu de Palha',
+        'Jojos\' Bizarre Adventure - Steel Ball Run'
       ],
       currentSlide: 0,
       isOpen: false
