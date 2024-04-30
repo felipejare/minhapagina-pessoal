@@ -1,13 +1,21 @@
 <template>
   <div class="dropdown">
     <button @click="toggleDropdown" class="button">
-      Abrir Menu
+      <h1>Personagens Favoritos</h1>
+      <div class="mais">+</div>
     </button>
     <ul v-if="isOpen" class="menu">
-      <li>Opção 1</li>
-      <li>Opção 2</li>
-      <li>Opção 3</li>
+      <li>
+        <div class="carousel">
+          <button @click="prevSlide">ANTERIOR</button>
+          <div class="slide">
+            <img :src="slides[currentSlide]" alt="Slide">
+          </div>
+          <button @click="nextSlide">PROXIMO</button>
+        </div>
+      </li>
     </ul>
+
   </div>
 </template>
 
@@ -15,10 +23,22 @@
 export default {
   data() {
     return {
+      slides: [
+        'https://via.placeholder.com/300x200?text=Slide%201',
+        'https://via.placeholder.com/300x200?text=Slide%202',
+        'https://via.placeholder.com/300x200?text=Slide%203'
+      ],
+      currentSlide: 0,
       isOpen: false
     };
   },
   methods: {
+    prevSlide() {
+      this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    },
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+    },
     toggleDropdown() {
       this.isOpen = !this.isOpen;
     }
@@ -36,6 +56,22 @@ export default {
   height: 75px;
   width: 700px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.mais{
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 50px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 350%;
 }
 
 .menu {
@@ -48,11 +84,30 @@ export default {
   background-color: #8a2be2;
 }
 
+
+.dropdown{
+  font-family: 'Roboto', 'Montserrat', 'Quicksand', 'OpenSans', sans-serif;
+
+}
+
 .dropdown:hover .menu {
   display: block;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 250px;
+  width: 800px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide img {
+  width: 200px;
+  height: auto;
 }
 </style>
