@@ -9,7 +9,7 @@
         <div class="carousel">
           <button @click="prevSlide">ANTERIOR</button>
           <div class="slide">
-            <h1>{{ slideName[currentSlide] }}</h1>
+            <h2>{{ slideName[currentSlide] }}</h2>
             <img :src="slides[currentSlide]" alt="Slide">
           </div>
           <button @click="nextSlide">PROXIMO</button>
