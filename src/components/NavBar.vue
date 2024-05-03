@@ -26,7 +26,6 @@ nav{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 30px;
   background-color: rgb(0, 0, 0, 0.83) ;
   width: 100%;
   font-family: 'Source Code Pro', monospace;  
