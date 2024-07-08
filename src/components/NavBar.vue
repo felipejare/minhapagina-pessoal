@@ -8,7 +8,7 @@
 
             <RouterLink class="apertadores" to="/">/home</RouterLink>
             <RouterLink class="apertadores" to="/about">/experiencia</RouterLink>
-            <a class="apertadores" href="">/projetos</a>
+            <RouterLink class="apertadores" to="/projetos">/projetos</RouterLink>
             <RouterLink class="apertadores" to="/melike" >/me like</RouterLink>
             <a class="apertadores" href="">/contato</a>
 
