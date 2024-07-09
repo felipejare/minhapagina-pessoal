@@ -130,3 +130,9 @@ export default {
     border-image-slice: 1;
 }
 </style>
+
+
+/* link do tutorial:
+https://progressivewebninja.com/how-to-create-vue-3-carousel/
+
+*/
