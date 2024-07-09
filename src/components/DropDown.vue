@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown">
-    <button @click="toggleDropdown" class="button">
+    <button @click="toggleDropdown" class="dropdown">
       <h1>Personagens Favoritos</h1>
       <div class="mais">+</div>
     </button>
@@ -37,8 +37,8 @@ export default {
       ],
       slideDescription: [
         'Satoru gojo é o mais lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
-        'MACACO DE LUVA É O MAIS BIADO lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
-        'jojos aventuras bizarras é um anime sobre porradaria e sexo'
+        'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
+        'jojos aventuras bizarras é um anime sobre porradaria'
 
       ],
       currentSlide: 0,
@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style scoped>
-.button {
+.dropdown {
   background: linear-gradient(to bottom, #8a2be2, #4b0082);
   color: white;
   border: none;
@@ -86,6 +86,7 @@ export default {
   display: flex;
   font-size: 350%;
 }
+
 
 .menu {
   display: none;
@@ -118,6 +119,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 30px
 }
 
 .slide img {
