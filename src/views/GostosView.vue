@@ -2,8 +2,8 @@
 import CardMedium from '../components/CardMedium.vue';
 import CardSmall from '../components/CardSmall.vue';
 import CardLarge from '../components/CardLarge.vue';
-import DropDown from '../components/DropDown.vue';
-import CardMusic from '../components/CardMusic.vue'
+import CardMusic from '../components/CardMusic.vue';
+import CarouSel from '../components/CarouSel.vue';
 
 
 
@@ -17,8 +17,8 @@ import CardMusic from '../components/CardMusic.vue'
         <CardSmall />
       </div>
       <CardLarge />
-      <DropDown />
       <CardMusic />
+      <CarouSel />
 
     </div>
   
