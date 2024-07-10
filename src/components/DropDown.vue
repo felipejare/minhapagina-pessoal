@@ -1,134 +1,64 @@
-<template>
-  <div class="dropdown">
-    <button @click="toggleDropdown" class="dropdown">
-      <h1>Personagens Favoritos</h1>
-      <div class="mais">+</div>
-    </button>
-    <ul v-if="isOpen" class="menu">
-      <li>
-        <div class="carousel">
-          <button @click="prevSlide">ANTERIOR</button>
-          <div class="slide">
-            <h2>{{ slideName[currentSlide] }}</h2>
-            <img :src="slides[currentSlide]" alt="Slide">
-          </div>
-          <button @click="nextSlide">PROXIMO</button>
-          <p>{{ slideDescription[currentSlide] }}</p>
-        </div>
-      </li>
-    </ul>
+<script>
 
-  </div>
-</template>
+  import 'vue3-carousel/dist/carousel.css'
+  import { Carousel, Slide, Navigation } from 'vue3-carousel';
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      slides: [
-        '../src/images/gojo.jpg',
-        '../src/images/luffy.png',
-        '../src/images/jojos.png'
-      ],
-      slideName: [
-        'Satoru Gojo - O Feiticeiro mais forte',
-        'Monkey D. Luffy - O Capitão dos Piratas do Chapéu de Palha',
-        'Jojos\' Bizarre Adventure - Steel Ball Run'
-      ],
-      slideDescription: [
-        'Satoru gojo é o mais lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
-        'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
-        'jojos aventuras bizarras é um anime sobre porradaria'
+  const slides = [
 
-      ],
-      currentSlide: 0,
-      isOpen: false
-    };
-  },
-  methods: {
-    prevSlide() {
-      this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-    },
-    nextSlide() {
-      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-    },
-    toggleDropdown() {
-      this.isOpen = !this.isOpen;
-    }
-  }
-};
+    { id: '1', title: 'Vue 3 Introduction', content: 'VueJS is a Library' },
+    { id: '2', title: 'Vue 3 Component', content: 'Know the components' },
+    { id: '3', title: 'Vue 3 Conditional', content: 'Rendering confitionally' },
+    { id: '4', title: 'Vue 3 Reactivity', content: 'VueJS is Reactivity' },
+    { id: '5', title: 'Vue 3 Compute', content: 'VueJS uses computed properties' },
+
+  ]
+
 </script>
 
+<template>
+  <Carousel>
+
+    <Slide v-for="slide in slides" :key="slide.id">
+      <div class="carousel__item">
+        <h3>{{ slide.title }}</h3>
+        <p>{{ slide.content }}</p>
+      </div>
+    </Slide>
+
+    <template #addons>
+
+      <Navigation />
+
+    </template>
+
+  </Carousel>
+</template>
+
+
+
 <style scoped>
-.dropdown {
-  background: linear-gradient(to bottom, #8a2be2, #4b0082);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  height: 75px;
-  width: 700px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
+
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: var(--vc-clr-primary);
+  color: var(--vc-clr-white);
+  font-size: 20px;
+  border-radius: 8px;
   justify-content: center;
-  margin: 10px;
-}
-.mais{
-  background-color: rgb(255, 255, 255);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  margin-left: 50px;
-  color: black;
   align-items: center;
-  justify-content: center;
-  display: flex;
-  font-size: 350%;
 }
 
-
-.menu {
-  display: none;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 65px;
-  width: 500px;
-  background-color: #8a2be2;
+.carousel__slide {
+  padding: 10px;
 }
 
-
-.dropdown{
-  font-family: 'Roboto', 'Montserrat', 'Quicksand', 'OpenSans', sans-serif;
-
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid white;
 }
 
-.dropdown:hover .menu {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 450px;
-  width: 900px;
-  padding-right: 300px;
-}
-
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 30px
-}
-
-.slide img {
-  width: 700px;
-  height: auto;
-  border: 3px solid; /* Define a cor da borda no hover */
-    border-image: linear-gradient(to right, rgb(96, 0, 151), rgb(115, 255, 0));
-    border-image-slice: 1;
-}
 </style>
 
 
