@@ -22,21 +22,21 @@ export default {
 
 .musicas { 
 
-    background-color: azure;
+    background-color: rgb(52, 0, 82);
     padding: 30px;
 
 }
 
 .block {
 
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
     padding: 30px;
     margin: 20px
 
 }
 .musicas h1 {
-    color: black;
+    color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
 }

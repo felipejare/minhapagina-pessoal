@@ -1,12 +1,10 @@
-<script setup>
+<script>
+
+import { defineComponent } from 'vue';
+
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-const slides = [
-  { id: '1', title: 'Vue 3 Introduction', content: 'VueJS is a library', src: 'map1.jpg' },
-  { id: '2', image: '../src/images/jojos.png', title: 'Vue 3 Components', content: 'Know the components' },
-  { id: '3', image: '../src/images/luffy.png', title: 'Vue 3 Conditional', content: 'Rendering Conditionally' },
-]
 </script>
 <template>
     <h1>Peronagens Favoritos</h1>
@@ -15,7 +13,7 @@ const slides = [
         <div class="carousel__item">
           <h3>{{ slide.title }}</h3>
           <p>{{ slide.content }}</p>
-          <img :src="`/images/$(slide.src)`">
+          <img :src="`../images/$(slide.src)`">
         </div>
       </Slide>
   
