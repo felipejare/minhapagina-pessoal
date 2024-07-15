@@ -8,8 +8,8 @@
 
 <style scoped>
 .container {
-  background-color: rgb(255, 255, 255);
-  width: 550px;
+  background-color: rgb(0, 0, 0);
+  width: 579px;
   height: 400px;
   border-radius: 10px;
   align-items: center;

@@ -10,7 +10,8 @@
             <RouterLink class="apertadores" to="/about">/experiencia</RouterLink>
             <RouterLink class="apertadores" to="/projetos">/projetos</RouterLink>
             <RouterLink class="apertadores" to="/melike" >/me like</RouterLink>
-            <a class="apertadores" href="">/contato</a>
+            <RouterLink class="apertadores" to="/contato" >/contato</RouterLink>
+
 
 
       </nav>
